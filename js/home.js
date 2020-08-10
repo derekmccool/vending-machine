@@ -50,7 +50,7 @@ function loadItems(){
     clearItems();
     $.ajax({
         type: 'GET',
-        url: 'http://tsg-vending.herokuapp.com/items',
+        url: 'https://tsg-vending.herokuapp.com/items',
         success: function(itemArray){
             $.each(itemArray, function(index, item){
                 var itemsDiv = $('#items');
@@ -85,7 +85,7 @@ function vendItem(){
 
     $.ajax({
         type: 'POST',
-        url: 'http://tsg-vending.herokuapp.com/money/' + amount + '/item/' + id,
+        url: 'https://tsg-vending.herokuapp.com/money/' + amount + '/item/' + id,
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
