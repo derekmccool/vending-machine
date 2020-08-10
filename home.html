@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Vending Machine</title>
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/home.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header col-12">
+            <div class="header-div">
+                <h1 class="header-logo with-light">VENDING </h1>
+            </div>
+            <div class="header-div">
+                <h1 class="header-logo no-light">MACHINE</h1>
+            </div>
+            
+        </div>
+         <hr>
+        </div>
+        <div class="outter-box col-12">
+            <ul class="list-group" id="errorMessages"></ul>
+                <div class="inner-box col col-lg-8" id="items">
+                </div> 
+                <div class="inner-box col col-lg-4" id="vending-console">
+                    <input id="item-choice" readonly type="hidden">
+                    <input id="balance-total" type="hidden" value="0.00" readonly> 
+                    <div class="message-box" id="messages">
+                        <div class="message-detail item-message" id="welcome-message">WELCOME</div>
+                        <div class="warning-detail item-message" id="error-message"></div>
+                        <div class="message-detail item-message" id="selected-item"></div>
+                        <div class="message-detail item-message" id="enjoy-message"></div>
+                        <div class="console-box button-box">
+                           <button class="console-button" id="make-purchase" onclick="vendItem()">PURCHASE</button>
+                           <button class="console-button" id="return-change" onclick="returnChange()">CANCEL</button>
+                        </div>
+                    </div>
+                    <div class="message-box">
+                        <div class="console-box" id="vending-balance">
+                            <h1 class="console-text activated-light">BALANCE: $</h1>
+                            <h1 class="console-text deactivated-light" id="balance-text">0.00</h1>
+                            <h1 class="console-text deactivated-light" id="selection-id-text">SELECTION ID:</h1>
+                            <h1 class="console-text deactivated-light" id="selection-id-number">0</h1>
+                        </div>                   
+                        <div class="console-box button-box">
+                            <button class="money-button button-flicker" id="add-dollar">+ DOLLAR</button>
+                            <button class="money-button" id="add-quarter">+ QUARTER</button>
+                            <button class="money-button" id="add-dime">+ DIME</button>
+                            <button class="money-button" id="add-nickel">+ NICKEL</button>
+                        </div>
+                    </div>
+                    <div class="message-box" id="change-return">
+                        <div class="warning-detail item-message" id="change-message"></div>
+                        <div class="console-box change-box" id="display-change">
+                            <div class="change" id="total-quarters"></div>
+                            <div class="change" id="total-dimes"></div>
+                            <div class="change" id="total-nickels"></div>
+                            <div class="change" id="total-pennies"></div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div></div>
+            </div>
+                   
+        </div>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
