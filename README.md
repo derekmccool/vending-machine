@@ -1,5 +1,5 @@
 # vending-machine
-cyberpunk vending machine
+Cyberpunk Vending Machine
 
 Goals of this project were as follows:
 
